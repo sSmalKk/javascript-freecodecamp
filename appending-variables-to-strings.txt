@@ -1,0 +1,4 @@
+// Change code below this line
+let someAdjective = "fun!";
+let myStr = "JavaScript is ";
+myStr += someAdjective;
