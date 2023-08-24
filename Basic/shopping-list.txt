@@ -1,0 +1,8 @@
+const myList = [];
+myList.push(["Chocolate Bar", 15]);
+myList.push(["Chocolate Bar", 15]);
+myList.push(["Chocolate Bar", 15]);
+myList.push(["Chocolate Bar", 15]);
+myList.push(["Chocolate Bar", 15]);
+myList.push(["Chocolate Bar", 15]);
+console.log(myList);

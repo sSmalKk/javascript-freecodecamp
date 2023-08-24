@@ -1,0 +1,2 @@
+const myArray = ["apple", 42];
+const myData = myArray[0];
