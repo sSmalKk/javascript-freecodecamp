@@ -1,0 +1,23 @@
+function rot13(str) {
+  let decodedStr = ""; // Inicializa uma string vazia para armazenar a mensagem decifrada
+
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i]; // Obtém o caractere atual da string
+    const charCode = str.charCodeAt(i); // Obtém o código ASCII do caractere
+
+    if (char >= 'A' && char <= 'Z') { // Verifica se o caractere é uma letra maiúscula
+      let decodedCharCode = charCode - 13; // Calcula o novo código ASCII decifrado
+      if (decodedCharCode < 65) { // Se o novo código for menor que o código de 'A'
+        decodedCharCode += 26; // Adiciona 26 para circular de volta ao alfabeto
+      }
+      decodedStr += String.fromCharCode(decodedCharCode); // Converte o código ASCII de volta para caractere e adiciona à mensagem decifrada
+    } else {
+      // Mantém caracteres não alfabéticos (espaços, pontuação) inalterados
+      decodedStr += char;
+    }
+  }
+
+  return decodedStr; // Retorna a mensagem decifrada
+}
+
+console.log(rot13("SERR PBQR PNZC")); // Saída: "FREE CODE CAMP"

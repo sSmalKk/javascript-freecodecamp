@@ -1,0 +1,28 @@
+const users = {
+  Alan: {
+    online: false
+  },
+  Jeff: {
+    online: true
+  },
+  Sarah: {
+    online: false
+  }
+}
+
+function countOnline(allUsers) {
+  // Only change code below this line
+  let count = 0; // Inicializa o contador de usuários online
+  
+  for (let user in allUsers) {
+    if (allUsers[user].online === true) {
+      count++; // Incrementa o contador se o usuário estiver online
+    }
+  }
+  
+  return count; // Retorna o número total de usuários online
+
+  // Only change code above this line
+}
+
+console.log(countOnline(users));
