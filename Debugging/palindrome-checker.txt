@@ -1,7 +1,0 @@
-function palindrome(str) {
-  // Remova caracteres não alfanuméricos e converta para minúsculas
-  str = str.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
-  
-  // Compare a string original com sua versão invertida
-  return str === str.split("").reverse().join("");
-}
