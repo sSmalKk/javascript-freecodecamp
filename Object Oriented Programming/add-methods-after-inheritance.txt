@@ -1,0 +1,19 @@
+function Animal() { }
+Animal.prototype.eat = function() { console.log("nom nom nom"); };
+
+function Dog() { }
+
+// Only change code below this line
+// Herda o protótipo de Animal
+Dog.prototype = Object.create(Animal.prototype);
+
+// Define o construtor corretamente
+Dog.prototype.constructor = Dog;
+
+// Adiciona o método bark ao protótipo de Dog
+Dog.prototype.bark = function() {
+  console.log("Woof!");
+};
+// Only change code above this line
+
+let beagle = new Dog();

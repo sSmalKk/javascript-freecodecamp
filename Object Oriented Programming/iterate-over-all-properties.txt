@@ -1,0 +1,26 @@
+// Definimos a função construtora Dog
+function Dog(name) {
+  this.name = name; // Esta é uma propriedade própria de instância
+}
+
+// Adicionamos uma propriedade numLegs ao prototype de Dog
+Dog.prototype.numLegs = 4; // Esta é uma propriedade do prototype
+
+// Criamos uma instância de Dog chamada beagle
+let beagle = new Dog("Snoopy");
+
+// Inicializamos dois arrays vazios para armazenar as propriedades próprias e do prototype
+let ownProps = [];
+let prototypeProps = [];
+
+// Iniciamos um loop for...in para iterar sobre todas as propriedades de beagle
+for (let property in beagle) {
+  if (beagle.hasOwnProperty(property)) {
+    // Se a propriedade é própria (não herdada), a adicionamos ao array ownProps
+    ownProps.push(property);
+  } else {
+    // Se a propriedade é do prototype, a adicionamos ao array prototypeProps
+    prototypeProps.push(property);
+  }
+}
+

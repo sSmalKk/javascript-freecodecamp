@@ -1,0 +1,10 @@
+function Dog(name) {
+  this.name = name;
+}
+
+Dog.prototype.numLegs = 4;
+
+let beagle = new Dog("Snoopy");
+
+// Verifique se beagle tem a propriedade numLegs
+console.log(beagle.numLegs); // Deve imprimir 4
