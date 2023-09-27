@@ -1,0 +1,15 @@
+function Dog(name) {
+  this.name = name;
+}
+
+Dog.prototype = {
+  // Only change code below this line
+  numLegs: 4, // Adiciona a propriedade numLegs
+  eat: function() {
+    console.log("nom nom nom"); // Adiciona o método eat()
+  },
+  describe: function() {
+    console.log("My name is " + this.name); // Adiciona o método describe()
+  }
+};
+

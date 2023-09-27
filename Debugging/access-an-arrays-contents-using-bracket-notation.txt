@@ -1,0 +1,7 @@
+let myArray = ["a", "b", "c", "d"];
+// Only change code below this line
+
+myArray[1] = "e"; // Change the value at index 1 to "e" (or any other value besides "b")
+
+// Only change code above this line
+console.log(myArray);

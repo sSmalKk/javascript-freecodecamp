@@ -1,0 +1,18 @@
+const arr = [2, 4, 5, 1, 7, 5, 2, 1];
+// Only change code below this line
+let sum = 0;
+let index = 0;
+
+while (index < arr.length) {
+  sum += arr[index];
+  if (sum === 10) {
+    break;
+  } else if (sum > 10) {
+    sum -= arr[index];
+    arr.splice(index, 1);
+  } else {
+    index++;
+  }
+}
+// Only change code above this line
+console.log(arr);
